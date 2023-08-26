@@ -126,6 +126,8 @@
   .products .card img{
     height:200px;
     width: 100%;
+    
+    border-radius: 20px 20px ;
   }
   .products .card .desc{
     padding: 5px 20px;
@@ -194,9 +196,7 @@
     margin: 0;
   }
   
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-  }
+ 
   
   .dropdown-content {
     display: none;
@@ -235,7 +235,7 @@
  
   
 h2{
-  color: red;
+  color: #f63e4e;
 }
 
 /* main page */
