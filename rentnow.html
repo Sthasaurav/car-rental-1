@@ -37,7 +37,8 @@ else if (email==null || email==""){
     <div class="login-card">
       <h2>Book your Ride</h2>
       <h3>Enter your detials</h3>
-      <form class="login-form" name="myform" method="post" onsubmit="return(validateform());">
+      
+      <form action="https://uat.esewa.com.np/epay/main" class="login-form" name="myform" method="post" onsubmit="return(validateform());">
         <input type="text" placeholder="Name" name="name" />
         <input type="text" placeholder="Contact No." name="phone">
 
@@ -51,17 +52,38 @@ else if (email==null || email==""){
         Enter your travel detials
         <textarea name="" id="" cols="30" rows="10" name="travels"></textarea>
 
-        <button type="submit">SUBMIT FORM</button>
+        <!--for payment-->
+        <input value="100" name="tAmt" type="hidden">
+        <input value="90" name="amt" type="hidden">
+        <input value="5" name="txAmt" type="hidden">
+        <input value="2" name="psc" type="hidden">
+        <input value="3" name="pdc" type="hidden">
+        <input value="EPAYTEST" name="scd" type="hidden">
+        <input value="ee2c3ca1-696b-4cc5-a6be-2c40d929d453" name="pid" type="hidden">
+        <input value="http://merchant.com.np/page/esewa_payment_success?q=su" type="hidden" name="su">
+        <input value="http://merchant.com.np/page/esewa_payment_failed?q=fu" type="hidden" name="fu">
+
+        <button type="submit">Pay with esewa</button>
+
+
+        <!--success of payment-->
+        
+        <response>
+          <response_code>Success</response_code>
+      </response>
+      
       </form>
 
-      <!-- <form name="myform" method="post" onsubmit="return(validateform());">
-        Name:<input type="text" name="name" required><br />
-        Phone:<input type="text" name="phone"><br />  
-        Email:<input type="text" name="Email"><br />
-        Password:<input type="password" name="password"><br />
-        <button type="submit">Submit</button>
-    </form> -->
-      
+     
+
     </div>
   </body>
+ 
+
+      
+
+  
+      
+    
+  
 </html>
